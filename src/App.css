@@ -1,32 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 .App {
-  text-align: center;
+    height: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.BackgroundMain{
+    background-image: url('./backimage.jpg');
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 900px;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Navbar  */
+
+.Navbar{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F2F0ED;
+    height: 64px;
 }
 
-.App-link {
-  color: #61dafb;
+.Navlist {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 1 rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toggle-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+}
+
+.toggle-button:focus {
+    outline: none;
+
+}
+
+.toggle-button-line {
+    width: 30px;
+    height: 2px;
+    background: white;
+}
+
+.logo {
+    margin-left: 2rem;
+
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: avenir,sans-serif;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.NavItems ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;  
+}
+
+.NavItems li {
+    padding: 0 0.5rem;
+}
+
+.NavItems a {
+    color: #844E42;
+    text-decoration: none;
+    font-family: avenir,sans-serif;
+
+}
+
+.NavItems a:hover,
+.NavItems a:active{
+    color: #EFD394;
+}
+
+@media (max-width: 768px) {
+    .NavItems {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar-toggle-button{
+        display: none;
+    }
+}
+
+/* Side Drawer */
+
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+
+.side-drawer {
+    height: 100%;
+    background-color: white;
+    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    max-width: 400px;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.side-drawer.open {
+    transform: translateX(0)
+}
+
+.side-drawer ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-drawer li {
+    margin: 0.5rem 0;
+}
+
+.side-drawer a {
+    color: #844E42;
+    font-family: avenir,sans-serif;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.side-drawer a:hover,
+.side-drawer a:active {
+    color: #EFD394;
+}
+
+@media (min-width: 769) {
+    .side-drawer{
+        display: none;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+}
+
+
+
+/* Homepage  */
+
+.headshot {
+    display: flex;
+    height:50vh;
+    width: 50vh;
+}
+
+.SonjaPic {
+    display: flex;
+    align-self: flex-end;
+    height: 50vh;
+    width: auto;
+}
+
+/* Contact Page */
+
+.BackgroundContact{
+    background-image: url('./Contacts.jpg');
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 900px;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
